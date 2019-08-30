@@ -1,0 +1,25 @@
+{
+  "name": "ts-love-story",
+  "version": "1.0.0",
+  "description": "Demo project for TypeScript - a love story",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolddp/ts-love-story.git"
+  },
+  "author": "Daniel Persson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bolddp/ts-love-story/issues"
+  },
+  "homepage": "https://github.com/bolddp/ts-love-story#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.3",
+    "mocha": "^6.2.0"
+  }
+}

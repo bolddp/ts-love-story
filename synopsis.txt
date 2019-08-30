@@ -1,0 +1,22 @@
+01 - CustomerService in Javascript
+  * insert({ name: 'customer01' });
+    * missing id error
+  * insert({ id: 123, name: 'customer02' });
+    * seems to work
+    * maybe id should be string?
+  * insert({ id: 'abc', name: 'customer02' });
+    * hmm, also working
+  * insert(customer, authToken)
+    * no compile time errors
+02 - getting started with Typescript
+03 - copy 01.js to 03.ts
+  * tsc --> works fine
+  * Add patameter type --> customer: Customer
+  * create interface Customer { id: number; name: string }
+  * all of a sudden: distinct compile time errors
+  * Customer.address? --> ? makes it optional
+  * remove call that doesn't have any id
+  * how to run it? > tsc && node dist/03.js
+
+
+

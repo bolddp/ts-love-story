@@ -1,12 +1,5 @@
-// Copy contents from 01.js
-interface Customer {
-  id: number;
-  name: string;
-  address?: string;
-}
-
 class CustomerService {
-  insert(customer: Customer) {
+  insert(customer) {
     if (!customer.id) {
       throw new Error('missing id');
     }
@@ -17,8 +10,10 @@ class CustomerService {
 const srv = new CustomerService();
 
 // Oops, missing id...
-// srv.insert({  name: 'customer01' });
+srv.insert({  name: 'customer01' });
 
 // Hmm, what type is id?
 srv.insert({ id: 123, name: 'customer01' }); // Works just fine
-// srv.insert({ id: 'abc', name: 'customer01' }); // Also works
+srv.insert({ id: 'abc', name: 'customer01' }); // Also works
+
+

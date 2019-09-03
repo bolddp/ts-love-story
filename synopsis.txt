@@ -1,4 +1,4 @@
-01 - CustomerService in Javascript
+CustomerService in Javascript
   * insert({ name: 'customer01' });
     * missing id error
   * insert({ id: 123, name: 'customer02' });
@@ -8,15 +8,68 @@
     * hmm, also working
   * insert(customer, authToken)
     * no compile time errors
-02 - getting started with Typescript
-03 - copy 01.js to 03.ts
-  * tsc --> works fine
-  * Add patameter type --> customer: Customer
-  * create interface Customer { id: number; name: string }
-  * all of a sudden: distinct compile time errors
-  * Customer.address? --> ? makes it optional
-  * remove call that doesn't have any id
-  * how to run it? > tsc && node dist/03.js
+
+getting started
+  * Node.js -> https://nodejs.org/en/
+  * > npm install -g typescript
+  * > tsc init - show the huge list of available configuration attributes
+  * copy my_tsconfig.json -> tsconfig.json
+
+basic types
+  * create file basic_types.ts
+  * let count: number = 12;
+  * let customerName: string = 'DOTP';
+  * let isVerified: boolean = false;
+  * let implicitNumber = 12;
+  * ERROR -> implicitNumber = 'abc'; -> NO WAY!
+  * enum CustomerState { CREATED, VERIFIED, REJECTED };
+  * This will translate the enum values to numbers, has some drawbacks
+  * Even better: String enums -> CREATED = 'Created' etc.
+  * Mayhem and chaos - the any type (should never be needed, really)
+
+introducing my new girlfriend
+  * create file new_gf.ts
+  * copy contents from 01-my_ex.js
+  * tsc -> works fine
+  * show folder dist ->
+  * export interface Customer { id: number; name: string; }
+  * export class CustomerService { insert(customer: Customer) ... }
+  * const srv = new CustomerService();
+  * const customer: Customer = { id: 'abc', name: 'Acme INC' }
+  * srv.insert(customer); -> COMPILE TIME ERROR!
+  * change -> id: 123
+  * tsc
+  * add Customer.address? field
+
+Interfaces and classes
+
+Generics
+
+3rd party support
+  * npm install --save checksum
+  * create file ChecksumChecker.ts
+  * import * as checksum from 'checksum';
+  * show warning message about missing type definitions
+  * for TypeScript to utilize a Javascript library, it needs to know about the API:
+    type declaration files either included in the packages or provided through an extra
+    dev-dependency package: @types/...
+  * npm install --save-dev @types/checksum
+  * the warning message has been replaced with a description of the checksum function
+  * Code:
+      import * as checksum from 'checksum';
+      const cs = checksum.default('tjoho', { algorithm: 'sha1' });
+      console.log(`Checksum: ${cs}`);
+  * Change algorithm to Algorithm, immediate error
+
+3rd party support: React
+
+3rd party support: AWS SDK
+
+Unit testing
+  mocha ts-node
+
+
+
 
 
 

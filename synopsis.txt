@@ -41,9 +41,32 @@ introducing my new girlfriend
   * tsc
   * add Customer.address? field
 
+visa hur Intellisense:n hjälper till oavsett hur många nivåer ner i
+instances.filter(x => x.ResourceRecords.Value)
+
 Interfaces and classes
+  * create file interfaces_and_classes.ts
+  * interface Order -> id: string -> articleNumber: string
+  * interface OrderRepository -> insert
+  * class DbOrderRepository -> log in constructor and insert
+  * class InMemoryOrderRepository -> log in constructor and insert
+  * let rep: OrderRepository -> new Db... -> new InMemory...
+  * tsc && node dist/interfaces_and_classes.js
+  * remove the executable code at the bottom
 
 Generics
+  * create file generics.ts
+  * interface InstanceProvider<T> -> get
+  * class Singleton -> creator ->  instance -> get()
+  * const useInMemory: boolean = false
+  * const repFactory = new Singleton... useInMemory ? :
+  * rep1, rep2 = repFactory.get();
+  * tsc && node dist/generics.js
+  * swap useInMemory and run again
+  * comment out code
+  * const rndFactory = new Singleton<number>(... Math.random());
+  * rndFactory.get() * 2 (same number!)
+  * exchange Math.random() -> new DbOrderRepository() -> generics won't allow it
 
 3rd party support
   * npm install --save checksum

@@ -1,3 +1,8 @@
+Preparations
+  Open project ts-love-story
+  Open project react-typescript-vscode -> Textbox.tsx
+  Open project fluent-aws -> Ec2Api.ts
+
 CustomerService in Javascript
   * insert({ name: 'customer01' });
     * missing id error
@@ -88,8 +93,8 @@ Generics
 
 3rd party support: AWS SDK
 
-Unit testing
-  mocha ts-node
+Unit testing (in case of time)
+  * fluent-aws -> Ec2InstanceTest.ts
 
 
 

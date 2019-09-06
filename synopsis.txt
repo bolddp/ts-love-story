@@ -1,7 +1,28 @@
 Preparations
   Open project ts-love-story
+    Ta bort dist-mappen
+    Ta bort tsconfig.json
+    Kopiera my_package.json till package.json
+    npm install
+    Open 01-my_ex.js
+    Open preview of 02-getting_started.md
+
+  Open preview of 02-getting_started.md
   Open project react-typescript-vscode -> Textbox.tsx
   Open project fluent-aws -> Ec2Api.ts
+
+Introduction
+  Welsome - TypeScript - love story
+  only slide, rest is Visual Studio Code
+  Current assignment AWS Lambda and Javascript. Fantastic -> productive -
+  frontend and backend. But maintenance, refactoring, returning after months,
+  rather uncomortable.
+  Tried TypeScript, fell head over heels. Warm cozy safe feeling. Still powerful,
+  productive. Ditched old sweetheart in favor of new one.
+
+A short survey
+  How many have worked with Javascript?
+  How many have worked with TypeScript?
 
 CustomerService in Javascript
   * insert({ name: 'customer01' });
@@ -14,7 +35,8 @@ CustomerService in Javascript
   * insert(customer, authToken)
     * no compile time errors
 
-getting started
+Getting started
+you can get started in under 10 minutes
   * Node.js -> https://nodejs.org/en/
   * > npm install -g typescript
   * > tsc init - show the huge list of available configuration attributes
@@ -75,7 +97,7 @@ Generics
 
 3rd party support
   * npm install --save checksum
-  * create file ChecksumChecker.ts
+  * create file ChecksumCreator.ts
   * import * as checksum from 'checksum';
   * show warning message about missing type definitions
   * for TypeScript to utilize a Javascript library, it needs to know about the API:
@@ -92,6 +114,10 @@ Generics
 3rd party support: React
 
 3rd party support: AWS SDK
+
+Black magic
+  * Type discriminators
+  *
 
 Unit testing (in case of time)
   * fluent-aws -> Ec2InstanceTest.ts

@@ -95,6 +95,16 @@ Generics
   * rndFactory.get() * 2 (same number!)
   * exchange Math.random() -> new DbOrderRepository() -> generics won't allow it
 
+Black magic (type discriminators)
+  also added some rather cool features, show one
+  * 03-type_disc.ts
+  * walkthrough code
+  * fill out last case -> UpdateActionType.RecycleAll
+  * consume it -> executeAction({ ... })
+  * very common when using redux
+
+
+
 3rd party support
   * npm install --save checksum
   * create file ChecksumCreator.ts

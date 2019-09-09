@@ -1,30 +1,30 @@
 Preparations
   Open project ts-love-story
-    Ta bort dist-mappen
-    Ta bort tsconfig.json
-    Kopiera my_package.json till package.json
+    Remove dist folder
+    Remove tsconfig.json
+    Copy my_package.json to package.json
     npm install
     Open 01-my_ex.js
     Open preview of 02-getting_started.md
-
-  Open preview of 02-getting_started.md
   Open project react-typescript-vscode -> Textbox.tsx
   Open project fluent-aws -> Ec2Api.ts
 
 Introduction
   Welsome - TypeScript - love story
-  only slide, rest is Visual Studio Code
+  two slides, rest is Visual Studio Code
   Current assignment AWS Lambda and Javascript. Fantastic -> productive -
   frontend and backend. But maintenance, refactoring, returning after months,
   rather uncomortable.
   Tried TypeScript, fell head over heels. Warm cozy safe feeling. Still powerful,
   productive. Ditched old sweetheart in favor of new one.
 
-A short survey
-  How many have worked with Javascript?
-  How many have worked with TypeScript?
+Slide 02
+  A short survey
+    How many have worked with Javascript?
+    How many have worked with TypeScript?
 
 CustomerService in Javascript
+  * open 01-my_ex.js
   * insert({ name: 'customer01' });
     * missing id error
   * insert({ id: 123, name: 'customer02' });
@@ -42,8 +42,7 @@ you can get started in under 10 minutes
   * > tsc init - show the huge list of available configuration attributes
   * copy my_tsconfig.json -> tsconfig.json
 
-basic types
-  * create file basic_types.ts
+03 basic types
   * let count: number = 12;
   * let customerName: string = 'DOTP';
   * let isVerified: boolean = false;
@@ -54,8 +53,7 @@ basic types
   * Even better: String enums -> CREATED = 'Created' etc.
   * Mayhem and chaos - the any type (should never be needed, really)
 
-introducing my new girlfriend
-  * create file new_gf.ts
+04 introducing my new girlfriend
   * copy contents from 01-my_ex.js
   * tsc -> works fine
   * show folder dist ->
@@ -68,10 +66,7 @@ introducing my new girlfriend
   * tsc
   * add Customer.address? field
 
-visa hur Intellisense:n hjälper till oavsett hur många nivåer ner i
-instances.filter(x => x.ResourceRecords.Value)
-
-Interfaces and classes
+05 Interfaces and classes
   * create file interfaces_and_classes.ts
   * interface Order -> id: string -> articleNumber: string
   * interface OrderRepository -> insert
@@ -81,7 +76,7 @@ Interfaces and classes
   * tsc && node dist/interfaces_and_classes.js
   * remove the executable code at the bottom
 
-Generics
+06 Generics
   * create file generics.ts
   * interface InstanceProvider<T> -> get
   * class Singleton -> creator ->  instance -> get()
@@ -95,17 +90,7 @@ Generics
   * rndFactory.get() * 2 (same number!)
   * exchange Math.random() -> new DbOrderRepository() -> generics won't allow it
 
-Black magic (type discriminators)
-  also added some rather cool features, show one
-  * 03-type_disc.ts
-  * walkthrough code
-  * fill out last case -> UpdateActionType.RecycleAll
-  * consume it -> executeAction({ ... })
-  * very common when using redux
-
-
-
-3rd party support
+07 3rd party support
   * npm install --save checksum
   * create file ChecksumCreator.ts
   * import * as checksum from 'checksum';
@@ -117,17 +102,24 @@ Black magic (type discriminators)
   * the warning message has been replaced with a description of the checksum function
   * Code:
       import * as checksum from 'checksum';
-      const cs = checksum.default('tjoho', { algorithm: 'sha1' });
-      console.log(`Checksum: ${cs}`);
+      export class ChecksumCreator
+      calc()
+        return checksum.default('tjoho', { algorithm: 'sha1' });
+        console.log(`Checksum: ${cs}`);
   * Change algorithm to Algorithm, immediate error
 
 3rd party support: React
 
-3rd party support: AWS SDK
+Black magic (type discriminators)
+  also added some rather cool features, show one
+  * 03-type_disc.ts
+  * walkthrough code
+  * fill out last case -> UpdateActionType.RecycleAll
+  * consume it -> executeAction({ ... })
+  * very common when using redux
 
-Black magic
-  * Type discriminators
-  *
+
+3rd party support: AWS SDK
 
 Unit testing (in case of time)
   * fluent-aws -> Ec2InstanceTest.ts

@@ -1,4 +1,5 @@
 Preparations
+  Connect to phone wifi
   Open project ts-love-story
     Remove dist folder
     Remove tsconfig.json

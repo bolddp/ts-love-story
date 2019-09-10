@@ -16,8 +16,11 @@
     "url": "https://github.com/bolddp/ts-love-story/issues"
   },
   "homepage": "https://github.com/bolddp/ts-love-story#readme",
-  "dependencies": {},
+  "dependencies": {
+    "checksum": "^0.1.1"
+  },
   "devDependencies": {
+    "@types/checksum": "^0.1.30",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.3",
     "mocha": "^6.2.0"
